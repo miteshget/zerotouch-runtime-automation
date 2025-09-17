@@ -13,10 +13,8 @@ else
   echo "Checking out ref ${GIT_REPO_REF}"
   git checkout ${GIT_REPO_REF}
 fi
-
-cd setup-automation
 if [[ -n "${VAULT_PASSWORD}" ]]; then
 echo ${VAULT_PASSWORD} > /tmp/.vault
 export ANSIBLE_VAULT_PASSWORD_FILE=/tmp/.vault
 fi
-ansible-playbook setup.yml
+python /app/main.py
