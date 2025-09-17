@@ -10,6 +10,8 @@ COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
 ENV BASE_DIR="/runner/repo"
+ENV HOST="0.0.0.0"
+ENV PORT=8501
 
 # Copy ansible plugins
 RUN mkdir -p /usr/share/ansible/plugins/action/

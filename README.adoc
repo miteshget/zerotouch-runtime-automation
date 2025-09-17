@@ -6,7 +6,7 @@ Following environment variables can be set to configure validation script
 
 * `max_workers` - Number of the concurrent Ansible Runner processes. Default: 2.
 * `host` - Bind socket to this host. Default: `127.0.0.1`.
-* `port` - Bind to a socket with this port. Default: 8000.
+* `port` - Bind to a socket with this port. Default: 8501.
 * `log_level` - Set the log level. Options are `critical`, `error`, `warning`, `info`, `debug`, `trace`. Default: `info`.
 * `reload` - Enable auto-reload when code was changed. This option should not be used in production due to additional resources consumption. Default: False.
 * `base_dir` - Base directory for the `scripts_path` and `artifacts_path`. Default: Absolute path to `main.py`.
