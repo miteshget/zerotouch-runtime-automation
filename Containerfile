@@ -14,6 +14,7 @@ COPY ./ansible.cfg /opt/app-root/src/.ansible.cfg
 COPY requirements.yml /tmp/requirements.yml
 RUN ansible-galaxy collection install -vv -r /tmp/requirements.yml --collections-path "/usr/share/ansible/collections"
 RUN rm /opt/app-root/src/.ansible.cfg
+RUN chown -R ${USER_UID}:0 /opt/app-root/src/.ansible
 
 ENV BASE_DIR="/runner/repo"
 ENV HOST="0.0.0.0"
