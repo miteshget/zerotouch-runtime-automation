@@ -10,8 +10,6 @@ COPY ./requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-ARG ANSIBLE_GALAXY_SERVER_CERTIFIED_TOKEN
-ARG ANSIBLE_GALAXY_SERVER_VALIDATED_TOKEN
 COPY ./ansible.cfg /opt/app-root/src/.ansible.cfg
 COPY requirements.yml /tmp/requirements.yml
 RUN ansible-galaxy collection install -vv -r /tmp/requirements.yml --collections-path "/usr/share/ansible/collections"
