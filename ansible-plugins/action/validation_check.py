@@ -126,7 +126,7 @@ class ActionModule(ActionBase):
             raise AnsibleError('The job_info_dir variable must be defined.')
         
         # Output file path
-        output_result_path = os.path.join(output_dir, 'output.txt')
+        output_result_path = os.path.join(output_dir, 'script.out')
         
         # Initialize Conditional object
         cond = Conditional(loader=self._loader)
