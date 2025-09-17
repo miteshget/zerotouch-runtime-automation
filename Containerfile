@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 COPY ./ansible.cfg /opt/app-root/src/.ansible.cfg
 COPY requirements.yml /tmp/requirements.yml
 RUN ansible-galaxy collection install -vv -r /tmp/requirements.yml --collections-path "/usr/share/ansible/collections"
-
+RUN rm /opt/app-root/src/.ansible.cfg
 
 ENV BASE_DIR="/runner/repo"
 ENV HOST="0.0.0.0"
