@@ -1,0 +1,40 @@
+---
+collections:
+- name: ansible.netcommon
+- name: ansible.posix
+- name: ansible.utils
+- name: ansible.windows
+- name: awx.awx
+# boto3 >= 1.18.0
+# botocore >= 1.21.0
+- name: community.aws
+# cryptography
+- name: community.crypto
+- name: community.general
+- name: containers.podman
+
+# -----------------------------------------
+# Red Hat certified collections
+# -----------------------------------------
+- name: ansible.controller
+- name: ansible.eda
+- name: ansible.hub
+- name: ansible.platform
+- name: cisco.ios
+- name: cisco.iosxr
+- name: cisco.nxos
+- name: redhat.insights
+- name: redhat.rhel_system_roles
+- name: redhat.satellite
+- name: redhat.openshift
+- name: redhat.openshift_virtualization
+# -----------------------------------------
+
+# -----------------------------------------
+# Additional Community collections
+# -----------------------------------------
+- name: infra.ah_configuration
+- name: infra.aap_configuration
+- name: infra.controller_configuration
+- name: infra.eda_configuration
+# -----------------------------------------
